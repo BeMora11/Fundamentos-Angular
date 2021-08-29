@@ -1,0 +1,9 @@
+<app-spinner *ngIf="cargando"></app-spinner>
+<div class="py-2" *ngIf="!cargando">
+  <h1><span class="titulo">Nombre:</span> {{nombre}}</h1>
+  <h2><span class="titulo">Email:</span> {{email}}</h2>
+  <h2><span class="titulo">Genero:</span> {{genero}}</h2>
+  <h2><span class="titulo">Estatus:</span> <span [ngStyle]="{'color': status == 'active' ? 'green' : 'red' }">
+      {{status}}</span></h2>
+  <button class="btn btn-sm btn-info" routerLink="/dashboard">Regresar</button>
+</div>
